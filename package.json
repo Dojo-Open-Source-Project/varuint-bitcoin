@@ -1,35 +1,51 @@
 {
-  "name": "varuint-bitcoin",
+  "name": "@samouraiwallet/varuint-bitcoin",
   "version": "1.1.2",
   "description": "encode/decode number as bitcoin variable length integer",
-  "homepage": "https://github.com/bitcoinjs/varuint-bitcoin",
+  "homepage": "https://code.samourai.io/dojo/varuint-bitcoin",
   "bugs": {
-    "url": "https://github.com/bitcoinjs/varuint-bitcoin/issues"
+    "url": "https://code.samourai.io/dojo/varuint-bitcoin/-/issues"
   },
   "license": "MIT",
   "author": "Kirill Fomichev <fanatid@ya.ru> (http://github.com/fanatid)",
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ],
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitcoinjs/varuint-bitcoin.git"
+    "url": "https://code.samourai.io/dojo/varuint-bitcoin.git"
   },
   "scripts": {
-    "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
-    "lint": "standard",
-    "test": "npm run lint && npm run unit",
-    "unit": "tape test/*.js"
-  },
-  "dependencies": {
-    "safe-buffer": "^5.1.1"
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "typescript": "tsc --noEmit",
+    "lint": "ts-standard",
+    "lint:fix": "ts-standard --fix",
+    "build:clean": "rm -rf dist",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build": "pnpm run build:clean && pnpm run build:esm",
+    "prepack": "pnpm run lint && pnpm run typescript && pnpm run test && pnpm run build"
   },
   "devDependencies": {
-    "nyc": "^14.1.1",
-    "standard": "*",
-    "tape": "^4.5.1"
+    "@types/node": "^20.12.7",
+    "@vitest/coverage-v8": "^1.5.0",
+    "eslint": "^8.57.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "ts-standard": {
+    "ignore": [
+      "dist",
+      "vitest.config.ts"
+    ]
   }
 }

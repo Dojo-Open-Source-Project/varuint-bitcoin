@@ -1,6 +1,6 @@
 {
   "name": "@samouraiwallet/varuint-bitcoin",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "encode/decode number as bitcoin variable length integer",
   "homepage": "https://code.samourai.io/dojo/varuint-bitcoin",
   "bugs": {

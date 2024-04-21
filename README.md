@@ -1,4 +1,13 @@
-# varuint-bitcoin
+# @samouraiwallet/varuint-bitcoin
+
+[![NPM Package](https://img.shields.io/npm/v/@samouraiwallet/varuint-bitcoin.svg?style=flat-square)](https://www.npmjs.com/package/@samouraiwallet/varuint-bitcoin)
+
+This is a fork of the [original varuint-bitcoin library](https://github.com/bitcoinjs/varuint-bitcoin) with minor changes:
+- codebase updated to use UInt8Array instead of Buffer - thus making this library browser-compatible without any shims
+- package type changed to ESModule instead of CommonJS
+- updated tests to reflect these changes
+
+## Original Readme
 
 [![NPM Package](https://img.shields.io/npm/v/varuint-bitcoin.svg?style=flat-square)](https://www.npmjs.org/package/varuint-bitcoin)
 [![Build Status](https://img.shields.io/travis/bitcoinjs/varuint-bitcoin.svg?branch=master&style=flat-square)](https://travis-ci.org/bitcoinjs/varuint-bitcoin)

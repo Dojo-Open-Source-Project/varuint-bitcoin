@@ -2,9 +2,9 @@
   "name": "@samouraiwallet/varuint-bitcoin",
   "version": "2.0.0",
   "description": "encode/decode number as bitcoin variable length integer",
-  "homepage": "https://code.samourai.io/dojo/varuint-bitcoin",
+  "homepage": "https://github.com/Dojo-Open-Source-Project/varuint-bitcoin",
   "bugs": {
-    "url": "https://code.samourai.io/dojo/varuint-bitcoin/-/issues"
+    "url": "https://github.com/Dojo-Open-Source-Project/varuint-bitcoin/issues"
   },
   "license": "MIT",
   "author": "Kirill Fomichev <fanatid@ya.ru> (http://github.com/fanatid)",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://code.samourai.io/dojo/varuint-bitcoin.git"
+    "url": "https://github.com/Dojo-Open-Source-Project/varuint-bitcoin.git"
   },
   "scripts": {
     "test": "vitest run",
